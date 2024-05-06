@@ -1,18 +1,18 @@
 package user;
 
 import com.github.javafaker.Faker;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import user.model.User;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class Main {
 
     private static Faker faker = new Faker();
 
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("legoset");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("legoset-mysql");
         EntityManager em = emf.createEntityManager();
 
         User user = User.builder().username("linus").password("123456").build();

@@ -2,12 +2,11 @@ package legoset.model;
 
 import java.time.Year;
 
-import javax.persistence.Column;
-import javax.persistence.Convert;
-import javax.persistence.Converter;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 import jpa.YearConverter;
@@ -26,7 +25,7 @@ public class LegoSet {
 
     @Column(nullable=false)
     @Convert(converter=YearConverter.class)
-    private Year year;
+    private Year yearOfRelease;
 
     @Column(nullable=false)
     private int pieces;

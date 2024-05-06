@@ -1,9 +1,11 @@
 package jpa;
 
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+
 import java.time.Year;
 
-import javax.persistence.AttributeConverter;
-import javax.persistence.Converter;
+
 
 @Converter
 public class YearConverter implements AttributeConverter<Year, Integer> {

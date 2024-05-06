@@ -1,17 +1,15 @@
 package user.model;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Version;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(name="my_user")
 public class User {
 
     @Id
